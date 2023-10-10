@@ -19,7 +19,7 @@ pipeline {
 
                 sh 'npm run plain-install'
                 sh 'npm run build-noclean'
-                zip zipFile:'site.zip', dir:'build/site/**', archive:'true'
+                zip zipFile:'site.zip', dir:'build/site', archive:'true'
 //                dir('build/site') {
 //		  sh 'git add .'
 //		  sh 'echo `git commit -m "site build"`'
