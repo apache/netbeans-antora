@@ -1,0 +1,25 @@
+site:
+  title: Apache Netbeans Website
+  start_page: front::index.adoc
+  url: https://netbeans.apache.org
+## rss generator
+antora:
+  extensions:
+  - require: ./lib/rssfeed.js
+
+content:
+  sources:
+  - url: ./../netbeans-antora-site/
+    branches: HEAD
+  - url: ./../netbeans-antora-wiki/
+    branches: HEAD
+  - url: ./../netbeans-antora-tutorials/
+    branches: HEAD
+
+ui:
+  bundle:
+  #  url: "./node_modules/@apache-netbeans/netbeans-antora-ui/build/netbeans-ui-bundle.zip"
+    url: ./../netbeans-antora-ui/build/netbeans-ui-bundle.zip
+    snapshot: true
+  default_layout: page
+

@@ -1,0 +1,7 @@
+{
+    "devDependencies": {
+        "@antora/cli": "3.1.4",
+        "@antora/site-generator": "3.1.4",
+        "@apache-netbeans/netbeans-antora-ui": "https://github.com/apache/netbeans-antora-ui.git"
+    }
+}
