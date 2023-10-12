@@ -1,0 +1,9 @@
+static_files:
+- .htaccess
+- doap_NetBeans.rdf
+- ns/issues.html
+- dtds/*
+- ns/README.txt
+- ns/ant-project-libraries/*
+- ns/j2se-project/*
+- ns/nb-module-project/*
