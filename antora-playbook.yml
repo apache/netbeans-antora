@@ -25,4 +25,5 @@ ui:
     url: "./node_modules/@apache-netbeans/netbeans-antora-ui/build/netbeans-ui-bundle.zip"
     snapshot: true
   default_layout: page
+  supplemental_files: ./supplemental-ui
 
