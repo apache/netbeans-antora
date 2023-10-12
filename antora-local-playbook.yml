@@ -6,6 +6,8 @@ site:
 antora:
   extensions:
   - require: ./lib/rssfeed.js
+  - require: '@antora/lunr-extension'
+    index_latest_only: true
 
 content:
   sources:

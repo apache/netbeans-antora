@@ -1,15 +1,18 @@
 {
-    "private":true,
-    "scripts":{
-      "clean-build":"npm run clean-install;npm run build",
-      "clean-install": "rm -rf node_modules/ .cache/ package-lock.json;npm i --cache=.cache/npm",
-      "plain-install": "npm i --cache=.cache/npm",
-      "build":"node_modules/.bin/antora antora-playbook.yml --fetch --clean",
-      "build-noclean":"node_modules/.bin/antora antora-playbook.yml --fetch"
+    "private": true,
+    "scripts": {
+        "clean-build": "npm run clean-install;npm run build",
+        "clean-install": "rm -rf node_modules/ .cache/ package-lock.json;npm i --cache=.cache/npm",
+        "plain-install": "npm i --cache=.cache/npm",
+        "build": "node_modules/.bin/antora antora-playbook.yml --fetch --clean",
+        "build-noclean": "node_modules/.bin/antora antora-playbook.yml --fetch"
     },
     "devDependencies": {
         "@antora/cli": "3.1.4",
         "@antora/site-generator": "3.1.4",
         "@apache-netbeans/netbeans-antora-ui": "https://github.com/apache/netbeans-antora-ui.git"
+    },
+    "dependencies": {
+        "@antora/lunr-extension": "^1.0.0-alpha.8"
     }
 }
