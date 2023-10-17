@@ -23,7 +23,7 @@ pipeline {
                 dir('build/site') {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
-                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git antora'
+                  sh 'git push origin antora'
 		}
             }
         }
