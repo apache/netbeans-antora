@@ -20,7 +20,7 @@ pipeline {
                     sh 'git rm -r .'
                 }
 
-                sh 'npm run plain-install'
+                sh 'npm run clean-install'
                 sh 'npm run build-noclean'
                 zip zipFile:'site.zip', dir:'build/site', archive:'true'
                 dir('build/site') {
