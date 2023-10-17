@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'rm -rf build'
 
-                sh 'git clone --depth 1 --branch antora https://gitbox.apache.org/repos/asf/netbeans-website.git build/site'
+                checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/antora']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'build/site'], cloneOption(depth: 1, noTags: false, reference: '', shallow: true)], userRemoteConfigs: [[credentialsId: '9b041bd0-aea9-4498-a576-9eeb771411dd', url: 'https://gitbox.apache.org/repos/asf/netbeans-website.git']])
                 dir('build/site') {
                     sh 'git rm -r .'
                 }
