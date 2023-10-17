@@ -26,7 +26,7 @@ pipeline {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
-                  sh 'git push origin antora'
+                  sh 'git push'
 		}
             }
         }
