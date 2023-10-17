@@ -17,7 +17,7 @@ pipeline {
                 dir('build/site') {
 	            //sh 'git checkout asf-staging'		
 		    sh 'git status'
-                    sh 'git rm -r .'
+                    sh 'git rm -r . --ignore-unmatch'
                 }
 
                 sh 'npm run clean-install'
