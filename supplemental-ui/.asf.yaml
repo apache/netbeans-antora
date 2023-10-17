@@ -1,0 +1,10 @@
+github:
+  description: "Apache NetBeans Antora Preview"
+  homepage: "https://netbeans-antora.staged.apache.org/"
+  labels:
+    - netbeans
+    - website
+    - antora
+staging:
+  profile: antora # See https://cwiki.apache.org/confluence/display/INFRA/git+-+.asf.yaml+features#Git.asf.yamlfeatures-Stagingawebsitepreviewdomain
+  whoami: antora
