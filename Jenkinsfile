@@ -21,7 +21,7 @@ pipeline {
                 }
 
                 sh 'npm run clean-install'
-                sh 'npm run build-noclean'
+                //sh 'npm run build-noclean'
                 zip zipFile:'site.zip', dir:'build/site', archive:'true'
                 dir('build/site') {
 		  sh 'git add .'
