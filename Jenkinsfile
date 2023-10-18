@@ -12,10 +12,9 @@ pipeline {
             steps {
                 sh 'rm -rf build'
 
-                //checkout changelog: false, poll: false, scm: scmGit(branches: [[name: '*/asf-staging']], extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'build/site'], cloneOption(depth: 1, noTags: false, reference: '', shallow: true)], userRemoteConfigs: [[credentialsId: '9b041bd0-aea9-4498-a576-9eeb771411dd', url: 'https://gitbox.apache.org/repos/asf/netbeans-website.git']])
-                sh 'git clone --depth 1 --branch asf-staging https://gitbox.apache.org/repos/asf/netbeans-website.git build/site'
+                sh 'git clone --depth 1 --branch antora https://gitbox.apache.org/repos/asf/netbeans-website.git build/site'
                 dir('build/site') {
-	            //sh 'git checkout asf-staging'		
+	            //sh 'git checkout antora'		
 		    sh 'git status'
                     sh 'git rm -r . --ignore-unmatch'
                 }
@@ -27,7 +26,7 @@ pipeline {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
-                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git asf-staging'
+                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git antora'
 		}
             }
         }
