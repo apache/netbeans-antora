@@ -90,7 +90,8 @@ Redirect 301 /projects/ /front/main/projects/
 Redirect 301 /participate/ /front/main/participate/
 Redirect 301 /kb/ /tutorial/main/kb/
 Redirect 301 /tutorials/ /tutorial/main/tutorial/
-Redirect 301 /wiki/ /wiki/main/wiki/
+#trying to prevent inifinite redirect
+RedirectMatch 301 ^/wiki/ /wiki/main/wiki/
 Redirect 301 /download/ /front/main/download/
 
 # A simple error page to antora folder
