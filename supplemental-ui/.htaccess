@@ -91,7 +91,7 @@ Redirect 301 /participate/ /front/main/participate/
 Redirect 301 /kb/ /tutorial/main/kb/
 Redirect 301 /tutorials/ /tutorial/main/tutorial/
 #trying to prevent inifinite redirect
-RedirectMatch 301 ^/wiki/ /wiki/main/wiki/
+RedirectMatch 301 "^/wiki(?!/main)(.*)$" "/wiki/main/wiki$1"
 Redirect 301 /download/ /front/main/download/
 
 # A simple error page to antora folder
