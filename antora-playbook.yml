@@ -2,6 +2,9 @@ site:
   title: Apache Netbeans Website
   start_page: front::index.adoc
   url: https://netbeans.apache.org
+## clean url
+urls:
+  html_extension_style: indexify
 ## rss generator
 antora:
   extensions:
