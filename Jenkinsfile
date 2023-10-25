@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh 'rm -rf build'
 
-                sh 'git clone --depth 1 --branch antora https://gitbox.apache.org/repos/asf/netbeans-website.git build/site'
+                sh 'git clone --depth 1 --branch asf-site https://gitbox.apache.org/repos/asf/netbeans-website.git build/site'
                 dir('build/site') {
 	            //sh 'git checkout antora'		
 		    sh 'git status'
@@ -25,7 +25,7 @@ pipeline {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
-                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git antora'
+                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git asf-site'
 		}
             }
         }
