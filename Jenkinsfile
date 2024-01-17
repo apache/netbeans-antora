@@ -3,7 +3,7 @@ pipeline {
             label 'git-websites'
     }
     options {
-       buildDiscarder(logRotator(numToKeepStr:'6'))
+       buildDiscarder(logRotator(numToKeepStr:'2'))
        disableConcurrentBuilds()
        timeout(time:50,unit:'MINUTES')
     }
@@ -18,9 +18,14 @@ pipeline {
 		    sh 'git status'
                     sh 'git rm -r . --ignore-unmatch'
                 }
-
+                sh 'rm -rf uibuild'
+                sh 'git clone --depth 1  https://github.com/main/netbeans-antora-ui.git uibuild'
+                dir('uibuild') {
+                    sh 'npm --cache=.cache/npm install '
+                    sh 'npm --cache=.cache/npm run gulp -- bundle'
+                }
                 sh 'npm run clean-install'
-                sh 'npm run build-noclean'                
+                sh 'npm run build-noclean'
                 dir('build/site') {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
