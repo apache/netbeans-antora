@@ -19,7 +19,7 @@ pipeline {
                     sh 'git rm -r . --ignore-unmatch'
                 }
                 sh 'rm -rf uibuild'
-                sh 'git clone --depth 1  https://github.com/main/netbeans-antora-ui.git uibuild'
+                sh 'git clone --depth 1  https://github.com/apache/netbeans-antora-ui.git uibuild'
                 dir('uibuild') {
                     sh 'npm --cache=.cache/npm install '
                     sh 'npm --cache=.cache/npm run gulp -- bundle'
