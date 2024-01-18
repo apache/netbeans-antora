@@ -25,7 +25,7 @@ content:
 
 ui:
   bundle:
-    url: "./uibuild/build/netbeans-ui-bundle.zip"
+    url: ./uibuild/public/_
     snapshot: true
   default_layout: page
   supplemental_files: ./supplemental-ui
