@@ -8,9 +8,8 @@
         "build-noclean": "node_modules/.bin/antora antora-playbook.yml --fetch"
     },
     "devDependencies": {
-        "@antora/cli": "3.1.4",
-        "@antora/site-generator": "3.1.4",
-        "@apache-netbeans/netbeans-antora-ui": "https://github.com/apache/netbeans-antora-ui.git"
+        "@antora/cli": "3.1.7",
+        "@antora/site-generator": "3.1.7"
     },
     "dependencies": {
         "@antora/lunr-extension": "^1.0.0-alpha.8"
