@@ -10,7 +10,10 @@ antora:
   - require: ./lib/rssfeed.js
   - require: '@antora/lunr-extension'
     index_latest_only: true
-
+## asciidoc create new tag for video youtube + consent
+asciidoc:
+  extensions:
+  - ./lib/a-video
 content:
   sources:
   - url: ./../netbeans-antora-site/
