@@ -21,6 +21,8 @@ pipeline {
                 sh 'rm -rf uibuild'
                 sh 'git clone --depth 1  https://github.com/apache/netbeans-antora-ui.git uibuild'
                 dir('uibuild') {
+	            // prepare folder		
+		    sh 'mkdir -p public/_'
                     sh 'npm --cache=.cache/npm install '
                     sh 'npm --cache=.cache/npm run gulp -- bundle'
                 }
