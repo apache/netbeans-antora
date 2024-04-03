@@ -117,7 +117,7 @@ RedirectMatch 301 "^/tutorials/(.*).html$" "/tutorial/main/tutorials/$1/"
 
 #trying to prevent inifinite redirect
 RedirectMatch 301 "^/wiki(?!/main)(.*)$" "/wiki/main/wiki$1"
-Redirect 301 /download/ /front/main/download/
+Redirect 301 /download /front/main/download
 
 
 
