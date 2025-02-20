@@ -1,42 +1,40 @@
-# Apache NetBeans antora web site building infrastructure
+# Apache NetBeans website with antora
 
-Apache NetBeans antora playbook
+Apache NetBeans website with antora playbook
 
 ## Infrastructure for Apache NetBeans website with antora
 
 ### Basic structure
-Several repository are used as content for the website
+Several repository are used as content for the website:
 
-- https://github.com/apache/netbeans-antora-site contains blogs and community pages
-- https://github.com/apache/netbeans-antora-wiki contains wiki pages
-- https://github.com/apache/netbeans-antora-tutorials contains tutorials ad kownledge database
-
-Another repository handle the UI, template and css for the website
-
-https://github.com/apache/netbeans-antora-ui
+- [netbeans-antora-site](https://github.com/apache/netbeans-antora-site) contains blogs and community pages
+- [netbeans-antora-wiki](https://github.com/apache/netbeans-antora-wiki) contains wiki pages
+- [netbeans-antora-tutorials](https://github.com/apache/netbeans-antora-tutorials) contains tutorials and kownledge database
+- [netbeans-antora-ui](https://github.com/apache/netbeans-antora-ui) handle the UI, template and css
 
 ### Tools
 
-You will need a LTS Node Js 
+- [Node.js](https://nodejs.org/en/download)
+- [Git](https://git-scm.com/downloads)
 
 ### Extensions
 
-- lib/rssfeed.js custom extension to generate atom file for rss
-- '@antora/lunr-extension' antora extension for indexing and search
+- 'lib/rssfeed.js' to generate atom file for rss
+- '@antora/lunr-extension' for indexing and search
 
 ### Building localy
 
-mkdir antora;cd antora
-git clone https://github.com/<yourfork>/netbeans-antora
-git clone https://github.com/<yourfork>/netbeans-antora-site
-git clone https://github.com/<yourfork>/netbeans-antora-wiki
-git clone https://github.com/<yourfork>/netbeans-antora-tutorials
-git clone https://github.com/<yourfork>/netbeans-antora-ui
-
+```
+mkdir antora
+cd antora
+git clone https://github.com/<username>/netbeans-antora.git
+git clone https://github.com/<username>/netbeans-antora-site.git
+git clone https://github.com/<username>/netbeans-antora-wiki.git
+git clone https://github.com/<username>/netbeans-antora-tutorials.git
+git clone https://github.com/<username>/netbeans-antora-ui.git
 cd netbeans-antora
-
 npx antora antora-local-playbook.yml
-
+```
 
 ## Apache guidelines for web sites
 
