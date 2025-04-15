@@ -8,3 +8,4 @@ static_files:
 - ns/ant-project-libraries/*
 - ns/j2se-project/*
 - ns/nb-module-project/*
+- updates/*
