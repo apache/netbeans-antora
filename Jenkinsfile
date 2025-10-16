@@ -37,4 +37,19 @@ pipeline {
             }
         }
     }
+	post {
+            cleanup {
+                cleanWs()
+            }
+            success {
+                slackSend (channel:'#netbeans-builds', message:"SUCCESS: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) ",color:'good')
+            }
+            unstable {
+                slackSend (channel:'#netbeans-builds', message:"UNSTABLE: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL}) ",color:'warning')
+            }
+            failure {
+                slackSend (channel:'#netbeans-builds', message:"FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'  (${env.BUILD_URL})",color:'danger')
+            }
+
+        }
 }
