@@ -32,7 +32,7 @@ pipeline {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
                   sh 'git status'			  
-                  sh 'git push origin asf-site'
+                  sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git asf-site'
 		}
             }
         }
