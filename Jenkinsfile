@@ -31,7 +31,8 @@ pipeline {
                 dir('build/site') {
 		  sh 'git add .'
 		  sh 'echo `git commit -m "site build"`'
-                  sh 'git status'			  
+                  sh 'git status'
+				  sh 'git config --local http.postBuffer 157286400'
                   sh 'git push https://gitbox.apache.org/repos/asf/netbeans-website.git asf-site'
 		}
             }
