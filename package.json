@@ -12,6 +12,6 @@
         "@antora/site-generator": "3.1.14"
     },
     "dependencies": {
-        "@antora/lunr-extension": "^1.0.0-alpha.11"
+        "@antora/lunr-extension": "^1.0.0-alpha.12"
     }
 }
